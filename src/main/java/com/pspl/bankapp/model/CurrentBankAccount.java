@@ -26,7 +26,7 @@ public class CurrentBankAccount extends BankAccount {
 
 	public void withdraw(double amount) throws OverdraftedException {
 		double temp = getBalance() - amount;
-		if(temp>=0) {
+		if(temp>=1) {
 			setBalance(temp);
 		}
 		else if((-1*temp) <= debitLimit && (-1*temp) <= (debitLimit - amountBorrowed)) {
