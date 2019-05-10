@@ -39,7 +39,7 @@ public class CurrentBankAccount extends BankAccount {
 	}
 
 	public void deposit(double amount) {
-		if(amountBorrowed > 0) {
+		if(amountBorrowed >= 1) {
 			if(amountBorrowed < amount) {
 				setBalance(amount-amountBorrowed);	
 				amountBorrowed = 0;
